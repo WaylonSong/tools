@@ -1,0 +1,11 @@
+logging:
+  level:
+    root: INFO
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration
+endpoints:
+  default:
+    web:
+      enabled: true
