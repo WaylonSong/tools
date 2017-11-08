@@ -33,14 +33,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers("/logout").hasRole("USER")
                     .antMatchers("/admin").hasRole("ADMIN")
                     .antMatchers("/somewhere").access("hasRole('ADMIN') and hasRole('USER')")
-                    .anyRequest().authenticated()
+//                    .anyRequest().authenticated()
                     .and()
                 .formLogin()
                     .loginPage("/login")
                     .permitAll()
                     .and()
-                .logout()
-                    .permitAll();
+                .logout().permitAll()
+                    .and().csrf().disable();
     }
 
 //    Default: Auth

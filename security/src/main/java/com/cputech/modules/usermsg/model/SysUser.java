@@ -1,5 +1,6 @@
 package com.cputech.modules.usermsg.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,6 +19,7 @@ public class SysUser implements UserDetails {
     @GeneratedValue
     public Long id;
     public String username;
+    @JsonIgnore
     public String password;
 
     @ManyToMany(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)

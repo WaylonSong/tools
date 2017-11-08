@@ -15,7 +15,7 @@ public class UsrMsgPagesConfig extends WebMvcConfigurerAdapter {
     }
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/signUp").setViewName("usr/signUp");
+        registry.addViewController("/home").setViewName("usr/home");
         registry.addViewController("/").setViewName("home");
         registry.addViewController("/logout").setViewName("usr/hello");
         registry.addViewController("/admin").setViewName("usr/hello");
